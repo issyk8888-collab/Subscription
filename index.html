@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>~ Choose your subscription plan ~</h1>
+    <p>Choose the plan that best fits your needs and enjoy exclusive benefits!</p>
+    <div class="container">
+        <div class="plan1">
+            <h3>Basic Plan</h3>
+            <p>$9.99/month</p>
+            <ul>
+                <li>Access to some limited content features</li>
+                <li>Less ad-supported experience</li>
+                <li>Basic customer support</li>
+            </ul>
+            <button type="button" class="btn-subscribe" data-plan-id="subscribe-basic" onclick="handleSubscribeClick(event)">Subscribe</button>
+        </div>
+        <div class="plan2">
+            <h3>Standard Plan</h3>
+            <p>$19.99/month</p>
+            <ul>
+                <li>Access to all limited content features</li>
+                <li>Ad-free experience</li>
+                <li>Priority customer support</li>
+                <li>Early access to some new features</li>
+            </ul>
+            <button type="button" class="btn-subscribe" data-plan-id="subscribe-standard" onclick="handleSubscribeClick(event)">Subscribe</button>
+        </div>
+        <div class="plan3">
+            <h3>VIP Plan</h3>
+            <p>$69.99/month</p>
+            <ul>
+                <li>Access to all limited content features</li>
+                <li>Ad-free experience</li>
+                <li>VIP support</li>
+                <li>Early access to all new features</li>
+                <li>Exclusive VIP content</li>
+                <li>Special VIP events and promotions</li>
+                <li>Access to gift shop and discounts by 35%</li>
+            </ul>
+            <button type="button" class="btn-subscribe" data-plan-id="subscribe-vip" onclick="handleSubscribeClick(event)">Subscribe</button>
+        </div>
+    </div>
+    <div class="emailpass">
+            <label for="email">Enter Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <label for="pass">Enter Password:</label>
+            <input type="password" id="pass" name="pass" required>
+            <br><br>
+        </div>
+        <div class="payment">
+            <button type="button" onclick="showPayment()">Confirm Payment</button>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
